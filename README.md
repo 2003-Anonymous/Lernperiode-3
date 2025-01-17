@@ -11,4 +11,10 @@ Ich möchte ein kleines WinForms-Programm erstellen, in dem man TicTacToe spiele
 - [x] Hinzufügen, dass jedes zweite mal ein O kommt
 - [x] Hinzufügen, dass ein Fenster erscheint, wenn man gewonnen hat
 
-Ich habe ein TicTacToe Feld erstellt mit Buttons. Wenn man einen anklickt, erscheint ein X und jedes zweite mal ein O. Oben am Feld wird der Spieler, welcher gerade am Zug ist, angezeigt. Ich habe noch 2 Buttons gemacht. Mit dem einten kann man das Spiel schliesen und mit dem anderen die Runde neu starten.
+Ich habe ein TicTacToe Feld erstellt mit Buttons. Wenn man einen Button anklickt, erscheint ein X und jedes zweite mal ein O. Oben am Feld wird der Spieler, welcher gerade am Zug ist, angezeigt. Ich habe noch 2 Buttons gemacht. Mit dem einten kann man das Spiel schliesen und mit dem anderen die Runde neu starten.
+
+## 17.01.25
+
+- [ ] Den Code verkürzen
+- [ ] Flexible Felder programmieren
+- [ ] Den ganzen Code Flexibel machen

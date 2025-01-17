@@ -17,183 +17,23 @@ namespace WinForms1
             InitializeComponent();
         }
 
-        int i = 0;
-        
+        int turnCounter = 0;
 
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void CheckButton(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(button1.Text))
+            Button myButton = (Button)sender;
+
+            if (string.IsNullOrEmpty(myButton.Text))
             {
-                button1.Text = XorO();
-                i++;
+                myButton.Text = XorO();
+                turnCounter++;
                 if (CheckWin())
                 {
-                    MessageBox.Show($"Spieler {button1.Text} hat gewonnen!");
+                    MessageBox.Show($"Spieler {myButton.Text} hat gewonnen!");
                     btnRestart_Click(null, null);
                 }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button2.Text))
-            {
-                button2.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button2.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button3.Text))
-            {
-                button3.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button3.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button4.Text))
-            {
-                button4.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button4.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button5.Text))
-            {
-                button5.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button5.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button6.Text))
-            {
-                button6.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button6.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button7.Text))
-            {
-                button7.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button7.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button8.Text))
-            {
-                button8.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button8.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
-                {
-                    MessageBox.Show("Unentschieden!");
-                    btnRestart_Click(null, null);
-                }
-            }
-            label1.Text = "Player: " + PlayerTurn();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(button9.Text))
-            {
-                button9.Text = XorO();
-                i++;
-                if (CheckWin())
-                {
-                    MessageBox.Show($"Spieler {button9.Text} hat gewonnen!");
-                    btnRestart_Click(null, null);
-                }
-                else if (i == 9)
+                else if (turnCounter == 9)
                 {
                     MessageBox.Show("Unentschieden!");
                     btnRestart_Click(null, null);
@@ -204,7 +44,7 @@ namespace WinForms1
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
-            i = 0;
+            turnCounter = 0;
             button1.Text = "";
             button2.Text = "";
             button3.Text = "";
@@ -214,20 +54,15 @@ namespace WinForms1
             button7.Text = "";
             button8.Text = "";
             button9.Text = "";
+
+            label1.Text = "Player: X";
         }
         private string XorO()
         {
-            string xOrO;
-            if (i % 2 == 0)
-            {
-                xOrO = "X";
-            }
-            else
-            {
-                xOrO = "O";
-            }
-            return xOrO;
+            return (turnCounter % 2 == 0) ? "X" : "O";
         }
+
+
         private bool CheckWin()
         {
             // Horizontale Reihen
@@ -248,28 +83,24 @@ namespace WinForms1
         }
 
         private void btnBack_Click(object sender, EventArgs e)
-            {
-                this.Close();
-            }
-        
+        {
+            this.Close();
+        }
 
         private string PlayerTurn()
         {
-            string player;
-
-            if(i % 2== 0)
-            {
-                player = "X";
-            }
-            else
-            {
-                player = "O";
-            }
-            return player;
+            return (turnCounter % 2 == 0) ? "X" : "O";
         }
-        
 
-        
+        private void btn4x4_Click(object sender, EventArgs e)
+        {
+            Button btn4 = new Button();
+            btn4.Location = new Point(40);
+        }
 
+        private void btn5x5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

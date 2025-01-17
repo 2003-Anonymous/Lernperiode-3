@@ -40,6 +40,8 @@
             btnRestart = new Button();
             btnBack = new Button();
             label1 = new Label();
+            btn4x4 = new Button();
+            btn5x5 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -49,7 +51,7 @@
             button1.Size = new Size(70, 70);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += CheckButton;
             // 
             // button2
             // 
@@ -58,7 +60,7 @@
             button2.Size = new Size(70, 70);
             button2.TabIndex = 1;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += CheckButton;
             // 
             // button3
             // 
@@ -67,7 +69,7 @@
             button3.Size = new Size(70, 70);
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += CheckButton;
             // 
             // button4
             // 
@@ -76,7 +78,7 @@
             button4.Size = new Size(70, 70);
             button4.TabIndex = 3;
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            button4.Click += CheckButton;
             // 
             // button5
             // 
@@ -85,7 +87,7 @@
             button5.Size = new Size(70, 70);
             button5.TabIndex = 4;
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            button5.Click += CheckButton;
             // 
             // button6
             // 
@@ -94,7 +96,7 @@
             button6.Size = new Size(70, 70);
             button6.TabIndex = 5;
             button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            button6.Click += CheckButton;
             // 
             // button7
             // 
@@ -103,7 +105,7 @@
             button7.Size = new Size(70, 70);
             button7.TabIndex = 6;
             button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            button7.Click += CheckButton;
             // 
             // button8
             // 
@@ -112,7 +114,7 @@
             button8.Size = new Size(70, 70);
             button8.TabIndex = 7;
             button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            button8.Click += CheckButton;
             // 
             // button9
             // 
@@ -121,7 +123,7 @@
             button9.Size = new Size(70, 70);
             button9.TabIndex = 8;
             button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            button9.Click += CheckButton;
             // 
             // btnRestart
             // 
@@ -153,11 +155,33 @@
             label1.TabIndex = 11;
             label1.Text = "Player: X";
             // 
+            // btn4x4
+            // 
+            btn4x4.Location = new Point(59, 141);
+            btn4x4.Name = "btn4x4";
+            btn4x4.Size = new Size(112, 34);
+            btn4x4.TabIndex = 12;
+            btn4x4.Text = "4 X 4";
+            btn4x4.UseVisualStyleBackColor = true;
+            btn4x4.Click += btn4x4_Click;
+            // 
+            // btn5x5
+            // 
+            btn5x5.Location = new Point(59, 207);
+            btn5x5.Name = "btn5x5";
+            btn5x5.Size = new Size(112, 34);
+            btn5x5.TabIndex = 13;
+            btn5x5.Text = "5 X 5";
+            btn5x5.UseVisualStyleBackColor = true;
+            btn5x5.Click += btn5x5_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn5x5);
+            Controls.Add(btn4x4);
             Controls.Add(label1);
             Controls.Add(btnBack);
             Controls.Add(btnRestart);
@@ -190,5 +214,7 @@
         private Button btnRestart;
         private Button btnBack;
         private Label label1;
+        private Button btn4x4;
+        private Button btn5x5;
     }
 }

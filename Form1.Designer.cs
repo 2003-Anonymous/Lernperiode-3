@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             label1 = new Label();
             button2 = new Button();
+            button3 = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // button1
             // 
+            button1.AccessibleDescription = "";
             button1.BackColor = Color.Red;
             button1.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.Location = new Point(278, 430);
@@ -67,12 +71,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(302, 197);
+            button3.Name = "button3";
+            button3.Size = new Size(240, 34);
+            button3.TabIndex = 3;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(986, 522);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
@@ -88,5 +102,7 @@
         private Button button1;
         private Label label1;
         private Button button2;
+        private Button button3;
+        private ToolTip toolTip1;
     }
 }

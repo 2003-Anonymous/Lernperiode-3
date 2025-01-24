@@ -26,3 +26,5 @@ Heute habe ich die einzelnen Buttonfunktionen auf eine einzige Funktion reduzier
 - [ ] Die Funktion, welche schaut, ob man gewonnen hat, noch erweitern, sodass sie bei allen grössen funktioniert.
 - [ ] So erweitern, dass es egal ist, wie gross das Feld ist. (Gewinnkombinationen selbst ermitteln)
 - [ ] Das Dessign verbessern, weil wenn man das Feld vergrössert, ist es nicht in der Mitte.
+
+Heute habe ich die CheckWin-Funktion erweitert, sodass sie jetzt funktioniert. Zudem habe ich noch hhinzugefügt, dass man am Anfach eine Feldgrösse auswählt. Während der Auswahl von der Grösse sind die Buttons in der Mitte und gehen nach der Auswahl nach ausen. Dann werden auch noch die Anderen Buttons sichtbar. Jetzt kann man auch die Feldgrösse auch wieder verkleinern z.B. von 5x5 auf 3x3.

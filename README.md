@@ -33,6 +33,7 @@ Heute habe ich die CheckWin-Funktion erweitert, sodass sie jetzt funktioniert. Z
 
 Ich habe ein TicTacToe programmiert. Zuerst gelangt man in eine Benutzeroberfläche, wo man einen Button mit der Aufschrift "TicTacToe" klicken kann. Dieser öffnet ein neues Fenster, wo man die Feldgrösse auswählen kann. 3x3, 4x4 oder 5x5. Nach der Auswahl erscheint ein Spielfeld mit der gewählten grösse. Die Grösse kann man links mit Buttons später auch noch verändern. Dort hat es auch noch einen Button, um das Spiel zurückzusetzten und einen, um wieder zur Startseite zurückzukehren. Oben steht immer, welcher Spieler am Zug ist und das Programm merkt automatisch, wann ein Spieler gewonnen hat oder das gesammte Feld ausgefüllt ist. Dann ploppt ein Fenster auf, in dem der Gewinner steht oder das Unentschieden ist.
 
+https://github.com/user-attachments/assets/1b6c613e-837c-4dd2-8e33-05695609ec20
 
 # Reflexion
 
